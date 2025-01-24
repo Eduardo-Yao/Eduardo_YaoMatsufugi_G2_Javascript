@@ -1,0 +1,136 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f7f7;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group input:focus {
+            border-color: #007bff;
+        }
+        .form-group .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="accessForm">
+        <h2>Inscription</h2>
+        <div class="form-group">
+            <label for="pseudo">Pseudo</label>
+            <input type="text" id="pseudo" name="pseudo" placeholder="6 caractères minimum">
+            <div class="error" id="pseudoError"></div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Entrez un email valide">
+            <div class="error" id="emailError"></div>
+        </div>
+        <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="8 caractères minimum">
+            <div class="error" id="passwordError"></div>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirmez le mot de passe</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+            <div class="error" id="confirmPasswordError"></div>
+        </div>
+        <button type="submit" class="btn">Se connecter</button>
+    </form>
+
+    <script>
+        document.getElementById('accessForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const pseudo = document.getElementById('pseudo');
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
+
+            const pseudoError = document.getElementById('pseudoError');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+            const confirmPasswordError = document.getElementById('confirmPasswordError');
+
+            pseudoError.textContent = '';
+            emailError.textContent = '';
+            passwordError.textContent = '';
+            confirmPasswordError.textContent = '';
+
+            let isValid = true;
+
+            if (pseudo.value.length < 6) {
+                pseudoError.textContent = 'Le pseudo doit contenir au moins 6 caractères.';
+                isValid = false;
+            }
+
+            if (!email.value.includes('@')) {
+                emailError.textContent = 'Veuillez entrer un email valide.';
+                isValid = false;
+            }
+
+            if (password.value.length < 8) {
+                passwordError.textContent = 'Le mot de passe doit contenir au moins 8 caractères.';
+                isValid = false;
+            }
+
+            if (password.value !== confirmPassword.value) {
+                confirmPasswordError.textContent = 'Les mots de passe ne correspondent pas.';
+                isValid = false;
+            }
+
+            if (isValid) {
+                window.location.href = "ElMadridistaSincero.html";
+            }
+        });
+    </script>
+
+</body>

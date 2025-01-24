@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELMadridistaSincero</title>
+</head>
+
+<body>
+
+ <body background="Les Différents Images/image-8.png">
+    
+<header>
+        <div class="decalerr">
+            <div>
+                <h1 class="titregauche">El Madridista Sincero</h1>
+            </div>
+            <div>
+                <p>Actu</p>
+            </div>
+            <div>
+                <p>Boutique</p>
+            </div>
+            <div>
+                <a href="http://127.0.0.1:5500/ElMadridistaSincero2.html">
+                    <p>Histoire</p>
+                </a>
+            </div>
+            <button id="mode-toggle">Mode Sombre</button>
+        </div>
+</header>
+
+    <main>
+     
+     <div class="milieu">
+
+     <div style="margin: 2%";>
+     <img src="Les Différents Images/image.png" alt="Vini" width="270" height="183"
+     style="border: 5px solid black;">
+     <p>Le régale de Vinicius</p>
+     </div>
+
+     <div style="margin: 2%";>
+     <img src="Les Différents Images/image-1.png" alt="Militao Blessure" width="270" height="183"
+     style="border: 5px solid black;">
+     <p>Militao et son cauchemar</p>
+     </div>
+
+     <div style="margin: 2%";>
+     <img src="Les Différents Images/image-2.png" alt="Mbappe VS vini" width="270" height="183"
+     style="border: 5px solid black;">
+     <p>Duel de ego, Vinicius VS Mbappe</p>
+     </div>
+ 
+     <div style="margin: 2%";>
+     <img src="Les Différents Images/image-3.png" alt="Liverpool" width="270" height="183"
+     style="border: 5px solid black;">
+     <p>Prochain défi, les Reds</p>
+     </div>
+
+     </div>
+
+     <div class="tabs">
+        <ul class="tab-list">
+            <li class="tab tab-active tab-content1">Di Stefano: But : 418 buts en 510 matchs (308 buts en 396 matchs officiels).
+                | Passes décisives : 100 passes décisives
+                | Titres : 18 trophées, dont 8 titres de La Liga, 5 Coupes d'Europe des clubs champions, 1 Coupe d'Espagne et 1 Coupe intercontinentale.</li>
+            <li class="tab tab-content2">Ferenc Puskás: But: 242 buts en 262 matchs officiels avec le club.
+                | Passes décisives : 105 passes décisives .
+            | Titres: 5 titres de La Liga (1961-1965)
+            3 Coupes d'Europe des clubs champions (1959, 1960, 1966)
+            1 Coupe d'Espagne (1962)
+            1 Coupe intercontinentale (1960) </li>
+            <li class="tab tab-content3">Raul Gonzalez: Buts : 323 buts en 741 matchs officiels. 
+                
+               | Passes décisives : 133 passes décisives. 
+
+               | Titres :
+                6 titres de La Liga.
+                3 Ligues des champions de l'UEFA.
+                4 Supercoupes d'Espagne.
+                1 Supercoupe de l'UEFA.
+                2 Coupes intercontinentales.</li>
+        </ul>
+
+        <div class="tab-content tab-content1 active">
+            <h3>Di Stefano Quotes</h3>
+            <p>"Aucun joueur est meilleurs que une équpie unie"</p>
+        </div>
+        <div class="tab-content tab-content2">
+            <h3>Ferenc Puskás Quotes</h3>
+            <p>"On avait pas toujours de chaussure donc on jouait pied nu sur n'importe quel terrain"</p>
+        </div>
+        <div class="tab-content tab-content3">
+            <h3>Raul Gonzalez Quotes</h3>
+            <p>"J'aime le foot pour différentes raison, être joueur du Real Madrid est la meilleur de ses choses"</p>
+        </div>
+    </div>
+     
+
+    <div class="contenu">
+     <div class="highlights">
+     <h3>
+        Match Highlights
+        </h3>
+        <a href="https://youtu.be/skYYv13LPbE?si=pdwjiZQNhVbAwSE0">
+        <img src="Les Différents Images/image-4.png" alt="Vidéo" width="750" height="400">
+        </a>
+     </div>
+        
+<div class="résultat">
+     <div style="text-align: right;">
+        <div class="prochains-matchs">
+            <h2>Prochains Matchs</h2>
+            <p>Real Madrid X Leganès</p>
+            <p>ODD: 1,49 X 6,54</p>
+            <p>Real Madrid X Liverpool</p>
+            <p>ODD: 3,47 X 1,93</p>
+            <p>Real Madrid X Getafe</p>
+            <p>ODD: 1,32 X 6,96</p>
+        </div>
+     </div>
+    
+    </main>
+     
+     <footer>
+
+     <a href="https://www.realmadrid.com/fr-FR">
+     <p>@realmadrid</p>
+
+     <a href="https://www.instagram.com/realmadrid?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+     <img src="Les Différents Images/image-5.png" alt="Instagram" width="90" height="90">
+
+     <a href="https://twitter.com/realmadrid?">
+     <img src="Les Différents Images/image-6.png" alt="X" width="90" height="90">
+
+     <a href="https://www.youtube.com/@realmadrid">
+     <img src="Les Différents Images/image-7.png" alt="Youtube"width="90" height="90">
+   
+     <link rel="stylesheet" href="CSS/style.css">
+
+     <link rel="stylesheet" href="CSS/flexbox.css">
+ 
+     </footer>
+     <script>
+        document.getElementById('mode-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('sombre');
+            if (document.body.classList.contains('sombre')) {
+                this.textContent = 'Mode Clair';
+            } else {
+                this.textContent = 'Mode Sombre';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

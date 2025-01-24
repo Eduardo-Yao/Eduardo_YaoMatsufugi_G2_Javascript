@@ -1,0 +1,34 @@
+section {
+
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    height: 200;
+    padding: 5rem;
+}
+
+div {
+
+    width: 50;
+    height: 100;
+    background-color: grey;
+}
+@media (max-width: 576px) {
+
+  }
+
+  @media (min-width: 577px) and (max-width: 768px) {
+   
+  }
+  
+  @media (min-width: 769px) and (max-width: 992px) {
+   
+  }
+  
+  @media (min-width: 993px) and (max-width: 1200px) {
+    
+  }
+  
+  @media (min-width: 1201px) {
+
+  }
